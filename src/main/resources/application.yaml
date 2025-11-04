@@ -1,0 +1,13 @@
+spring:
+  main:
+    web-application-type: none
+  application:
+    name: feishu-robot-server
+
+robot:
+  name: ${ROBOT_NAME}
+
+feishu:
+  ws:
+    appId: ${FEISHU_APP_ID}
+    secret: ${FEISHU_APP_SECRET}
