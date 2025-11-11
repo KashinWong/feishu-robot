@@ -13,11 +13,9 @@
 
 ## 技术栈
 
-- Java 11
-- Spring Boot 2.6.2
+- Java 21
+- Spring Boot 3.5.7
 - 飞书开放平台SDK
-- Hutool工具库
-- Caffeine缓存
 
 ## 环境要求
 
