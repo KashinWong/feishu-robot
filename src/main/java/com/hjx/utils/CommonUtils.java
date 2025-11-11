@@ -1,12 +1,9 @@
 package com.hjx.utils;
 
-import cn.hutool.core.collection.CollectionUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lark.oapi.service.im.v1.model.P2MessageReceiveV1;
-
-import java.util.List;
 
 
 public class CommonUtils {

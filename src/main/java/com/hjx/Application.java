@@ -1,6 +1,5 @@
 package com.hjx;
 
-import cn.hutool.core.util.StrUtil;
 import com.hjx.handler.EventHandler;
 import com.hjx.message.MessageUtils;
 import com.hjx.utils.CommonUtils;
@@ -18,6 +17,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -84,13 +84,13 @@ public class Application implements CommandLineRunner {
 
                                 MentionEvent mention = event.getEvent().getMessage().getMentions()[0];
 
-                                if (!StrUtil.equalsIgnoreCase(mention.getName(), robotName)) {
+                                if (!robotName.equalsIgnoreCase(mention.getName())) {
                                     return;
                                 }
 
                                 EventHandler handler = handlers.stream().filter(h -> {
                                     try {
-                                        return StrUtil.equalsIgnoreCase(CommonUtils.getCommand(event), h.command());
+                                        return h.command().equalsIgnoreCase(CommonUtils.getCommand(event));
                                     } catch (Exception e) {
                                         messageUtils.replyText(event, "解析命令失败");
                                         return false;

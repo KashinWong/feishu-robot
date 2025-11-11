@@ -4,11 +4,11 @@ import com.lark.oapi.Client;
 import com.lark.oapi.service.contact.v3.model.GetUserReq;
 import com.lark.oapi.service.contact.v3.model.GetUserResp;
 import com.lark.oapi.service.im.v1.model.P2MessageReceiveV1;
+import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
 
 @Component
 @Slf4j
